@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   AUDITOR DESIGN SYSTEM — CSS Custom Properties
+   ═══════════════════════════════════════════════════════════════════════════════ */
+:root {
+  /* ── Navy (primary dark) ── */
+  --navy-dark: #0D1B2A;
+  --navy: #1B2838;
+  --navy-light: #243447;
+  --navy-hover: #2A3F56;
+
+  /* ── Teal (accent) ── */
+  --teal: #00BFA5;
+  --teal-dark: #00897B;
+  --teal-light: #E0F7F4;
+  --teal-alpha: rgba(0,191,165,0.12);
+
+  /* ── Surfaces ── */
+  --bg-primary: #F8FAFB;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+
+  /* ── Borders ── */
+  --border: #E2E8F0;
+  --border-light: #F1F5F9;
+  --border-dark: rgba(255,255,255,0.08);
+
+  /* ── Text ── */
+  --text-primary: #0D1B2A;
+  --text-secondary: #64748B;
+  --text-muted: #94A3B8;
+
+  /* ── Status ── */
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --error: #DC2626;
+  --info: #3B82F6;
+
+  /* ── Fallbacks ── */
+  --background: #F8FAFB;
+  --foreground: #0D1B2A;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* ── Base reset ── */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'DM Sans', 'Segoe UI', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+/* ── Selection ── */
+::selection {
+  background: var(--teal);
+  color: white;
+}
